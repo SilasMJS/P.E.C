@@ -1,0 +1,7 @@
+print("Em que ano Você Nasceu?")
+nasc=input()
+nasc=int(nasc)
+print("Para qual ano você deseja saber sua Idade?")
+ano=input()
+ano=int(ano)
+print("No ano ",ano," você terá ",ano-nasc," anos!")

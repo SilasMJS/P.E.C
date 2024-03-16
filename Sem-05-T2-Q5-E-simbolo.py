@@ -1,17 +1,8 @@
-#Função Auxiliar onde vai ocorrer o processamento de dados ou operações
+#Função Auxiliar onde vai ocorrer o processamento de dados ou operações com uma função especificar
 def comparador(caract):
-    result = (caract == "'" or caract == '"' or caract == "!" or
-            caract == "@" or caract == "#" or caract == "$" or
-            caract == "%" or caract == "¨" or caract == "&" or
-            caract == "*" or caract == "(" or caract == ")" or
-            caract == "-" or caract == "+" or caract == "=" or
-            caract == "\\" or caract == "/" or caract == "?" or
-            caract == "^" or caract == "~" or caract == ":" or
-            caract == ";" or caract == "." or caract == "," or
-            caract == "<" or caract == ">" or caract == "[" or
-            caract == "]" or caract == "{" or caract == "}" or
-            caract == "´" or caract == "`" or caract == "|" or
-            caract == "_")
+    result = not(caract >= "A" and caract <= "Z" or
+              caract >= "a" and caract <= "z" or
+              caract >= "0" and caract <= "9")
     return result
 #Função Principal onde o codigo principal vai rodar
 def main():
@@ -21,4 +12,4 @@ def main():
     print(f"{comparador(caract)}")
 
 if __name__ == '__main__':
-    main()
+    main() 

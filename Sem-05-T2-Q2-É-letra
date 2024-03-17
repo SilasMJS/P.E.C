@@ -1,0 +1,12 @@
+def identficador_letra(letra):
+    letra = (letra >= "A" and letra <= "Z" or
+             letra >= "a" and letra <= "z")
+    return letra
+
+def main():
+    letra = input().strip()
+    print(f"{identficador_letra(letra)}")
+
+
+if __name__ == '__main()':
+    main()

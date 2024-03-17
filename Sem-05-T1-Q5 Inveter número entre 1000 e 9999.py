@@ -1,8 +1,9 @@
 #Função Auxiliar onde vai ser executado uma tarefa especifica
 def inverter(n):
+    #Convertendo de inteiro para string
     n = str(n)
-    inv = n[::-1]
-    return inv
+    #Retorno da Função
+    return n[3::-1]
 #Função Principal onde o codigo Principal vai ser executado
 def main():
     #Variável vai receber valor informado pelo usuário

@@ -1,11 +1,11 @@
 #Função Auxiliar onde vai ser executado so uma tarefa especifica
 def atualizado(p,d):
-    pre_atu = p + (p*(d/100))
-    return pre_atu
+    #Retorno da função 
+    return p + (p*(d/100))
 #Função Auxiliar onde vai ser executado so uma tarefa especifica
 def desconto(p,d):
-    pre_dsc = p - (p*(d/100)) 
-    return pre_dsc
+    #Retorno da Função
+    return p - (p*(d/100))
 #Função Principal onde vai ser executado o codigo principal
 def main():
     #variável vai receber valor real informado pelo usuário

@@ -10,9 +10,9 @@ def vogal(caract):
 #Função Principal onde fica contido o codigo Principal
 def main():
     #variavel vai receber caractere informado pelo usuário
-    caract = input().strip()
+    caract = input("Digite Uma Vogal: ").strip()
     #vai ser imprimido o resultado
-    print(f"{vogal(caract)}")
+    print(f"É Vogal? {vogal(caract)}")
 
 if __name__ == "__main__":
     main()

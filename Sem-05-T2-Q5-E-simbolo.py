@@ -7,9 +7,9 @@ def comparador(caract):
 #Função Principal onde o codigo principal vai rodar
 def main():
     #a variável vai receber o caractere informado pelo usuário
-    caract = input().strip()
+    caract = input("Digite um Simbolo: ").strip()
     #vai ser imprimido na tela o resultado para o usuário
-    print(f"{comparador(caract)}")
+    print(f"É Simbolo? {comparador(caract)}")
 
 if __name__ == '__main__':
     main() 

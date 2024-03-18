@@ -51,30 +51,52 @@
 # Chame a função para exibir a tabela ASCII
 #exibir_tabela_ascii()
 
-a = int(input())
-b = int(input())
+#a = int(input())
+#b = int(input())
 #Soma dos Numeros
-print(f"{a+b}")
+#print(f"{a+b}")
 #Concatenação das strings
-a = str(a)
-b = str(b)
-print(f"{a+b}")
+#a = str(a)
+#b = str(b)
+#print(f"{a+b}")
 #Multiplicação dos numeros
-a = float(a)
-b = float(b)
-print(f"{a*b}")
+#a = float(a)
+#b = float(b)
+#print(f"{a*b}")
 #Multiplicação como strings
-b = int(b)
-print(f"{a*b}")
+#b = int(b)
+#print(f"{a*b}")
 #Divisão dos Números
-a = float(a)
-b = float(b)
-print(f"{a/b}")
+#a = float(a)
+#b = float(b)
+#print(f"{a/b}")
 #Divisão Inteira dos Números
-print(f"{a//b}")
+#print(f"{a//b}")
 #A Exponenciação
-b = int(b)
-print(f"{a**b}")
+#b = int(b)
+#print(f"{a**b}")
 #O Módulo (resto)
-print(f"{a%b}")
+#print(f"{a%b}")
+
+# def bem_vindo():
+#     print("Bem-Vindo ao Python.")
+
+# def mensagem(msg):
+#     print(msg)
+
+# bem_vindo()
+# mensagem("Curso de Programação Estruturada")
+
+# n = int(input())
+
+# print(n%10)
+# n=n//10
+# print(n)
+# print(n%10)
+# n=n//10
+# print(n)
+# print(n%10)
+# n=n//10
+# print(n)
+# print(n%10)
 

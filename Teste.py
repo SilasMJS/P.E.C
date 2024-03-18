@@ -100,3 +100,40 @@
 # print(n)
 # print(n%10)
 
+#Função Auxiliar onde vai ocorrer o processamento de dados sendo focado em um processo especifico
+# def comparador(caract):
+#     result = ( caract >= "A" and caract <= "Z" or
+#                caract >= "a" and caract <= "z" or
+#                caract >= "0" and caract <= "9" 
+#                )
+#     return result
+
+# #Função Principal onde vai rodar o codigo principal
+# def main():
+#     #Variável vai receber o caractere informado pelo usuário
+#     caract = input().strip()
+#     #vai ser imprimido para o usuário o resultado 
+#     print(f'{comparador(caract)}')
+
+
+# if __name__ == '__main__':
+#     main()
+
+
+# def numeral(caractere):
+#     alfabeto=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','x','w','y','z']
+#     numeros=['0','1','2','3','4','5','6','7','8','9']
+#     if caractere in numeros or caractere in alfabeto:
+#         return True
+#     else:
+#         return False
+
+
+# def main():
+#     caractere_do_usuario=input().lower()
+#     analise_do_caractere=numeral(caractere_do_usuario)
+#     print(analise_do_caractere)
+
+
+# if __name__=="__main__":
+#     main()

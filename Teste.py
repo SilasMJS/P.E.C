@@ -141,3 +141,30 @@
 
 
 # https://kahoot.it/challenge/d2e1e8c7-7274-4c4a-8df5-cef1e4f1e541_1710201812399?&uid=MTg2LTAwMjg=
+
+# def contador(i):
+#     return +1
+
+# def condicao_princ(letra,i):
+#     if(len(letra)==1):
+#             print(ord(letra))
+#             condicao=input("Deseja Continuar?(sim/não)? ")
+#             if(condicao=="sim" or condicao=="Sim"):
+#                 pass  
+#             else:
+#                 i+=1
+#                 print("Okay! Fim do Código!!!")                    
+#     else:
+#         print("Você Digitou mais de um Caractere!!")
+    
+
+# def main():
+#     i = 1
+#     n = 2
+#     while i < n:
+#         letra = input("Digite um Caractere: ")
+#         condicao_princ(letra,i)
+        
+
+# if __name__ == "__main__":
+#     main()

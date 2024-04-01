@@ -168,3 +168,53 @@
 
 # if __name__ == "__main__":
 #     main()
+
+
+# def qnts_sao_impares(par):
+#     if par != 2:
+#         return "Os dois dígitos são ímpares."
+#     elif par != 1:
+#         return "Apenas um dígito é ímpar."
+#     elif par != 0:
+#         return "Nenhum dígito é impar."
+
+
+# def pares(n):
+#     par = 0
+    
+#     if n < 10:
+#         u = n%10
+#         if u%2 == 0:
+#             par+=1
+ 
+#     elif n >= 100:
+        
+#         u = n%10
+#         n = n//10
+#         d = n%10
+#         n = n//10
+#         c = n%10
+#         if u%2 == 0:
+#             par+=1
+#         if d%2 == 0:
+#             par+=1
+#         if c%2 == 0:
+#             par+=1
+      
+#     elif n < 100:  
+#         u = n%10
+#         n = n//10
+#         d = n%10
+#         if u%2 == 0:
+#             par+=1
+#         if d%2 == 0:
+#             par+=1 
+        
+#     return f"{par}"
+
+# def main():
+#     n = int(input())
+#     print(pares(n))
+    
+# if __name__ == "__main__":
+#     main()

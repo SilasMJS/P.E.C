@@ -25,11 +25,11 @@ def msg_repro():
   
 def msg_bemvindo():
     print("""*****************Bem-Vindo!****************
-***********Tabela de Resultado!***********\n""") 
+***********Tabela de Resultado!***********""") 
 
 
 def main():
-    # msg_bemvindo()
+    msg_bemvindo()
     matricula = input().strip()
     n1 = float(input())
     n2 = float(input())

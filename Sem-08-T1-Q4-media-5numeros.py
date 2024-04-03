@@ -1,38 +1,22 @@
-def maior_media(n1,n2,n3,n4,n5,media):
-    if n1 >= media:
-        if n2 >= media:
-            if n3 >= media:
-                if n4 >= media:
-                    if n5 >= media:
-                        return f"{n1:.2f}\n{n2:.2f}\n{n3:.2f}\n{n4:.2f}\n{n5:.2f}"
-                    return f"{n1:.2f}\n{n2:.2f}\n{n3:.2f}\n{n4:.2f}"
-                return f"{n1:.2f}\n{n2:.2f}\n{n3:.2f}"
-            return f"{n1:.2f}\n{n2:.2f}"
-        return n1
-    elif n2 >= media:
-        if n3 >= media:
-            if n4 >= media:
-                if n5 >= media:
-                    return f"{n2:.2f}\n{n3:.2f}\n{n4:.2f}\n{n5:.2f}"
-                return f"{n2:.2f}\n{n3:.2f}\n{n4:.2f}"
-            return f"{n2:.2f}\n{n3:.2f}"
-        return f"{n2:.2f}"
-    elif n3 >= media:
-        if n4 >= media:
-            if n5 >= media:
-                return f"{n3:.2f}\n{n4:.2f}\n{n5:.2f}"
-            return f"{n3:.2f}\n{n4:.2f}"
-        return f"{n3:.2f}"
-    elif n4 >= media:
-        if n5 >= media:
-            return f"{n4:.2f}\n{n5:.2f}"
-        return f"{n4:.2f}"
-    elif n5 >= media:
-        return f"{n5:.2f}"
-
 def media(n1,n2,n3,n4,n5):
     media = (n1+n2+n3+n4+n5)/5
-    return f"{media:.2f}\n{maior_media(n1,n2,n3,n4,n5,media)}"
+    return media
+
+
+def maior_media(n1,n2,n3,n4,n5):
+    m = media(n1,n2,n3,n4,n5)
+    string = ""
+    if n1 > m:
+        string += f"\n{n1:.2f}"
+    if n2 > m:
+        string += f"\n{n2:.2f}"
+    if n3 > m:
+        string += f"\n{n3:.2f}"
+    if n4 > m:
+        string += f"\n{n4:.2f}"
+    if n5 > m:
+        string += f"\n{n5:.2f}"
+    return f"{m:.2f}{string}"
 
 
 def main():
@@ -42,7 +26,7 @@ def main():
     n4 = int(input())
     n5 = int(input())
     
-    print(f"{media(n1,n2,n3,n4,n5)}")
+    print(f"{maior_media(n1,n2,n3,n4,n5)}")
 
 
 if __name__ == "__main__":

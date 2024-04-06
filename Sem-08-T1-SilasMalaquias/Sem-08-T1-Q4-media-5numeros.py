@@ -1,8 +1,8 @@
+# função auxiliar onde vai ser calculado a media
 def media(n1,n2,n3,n4,n5):
     media = (n1+n2+n3+n4+n5)/5
     return media
-
-
+# função auxiliar verificando numero maior que a media
 def maior_media(n1,n2,n3,n4,n5):
     m = media(n1,n2,n3,n4,n5)
     string = ""
@@ -16,18 +16,19 @@ def maior_media(n1,n2,n3,n4,n5):
         string += f"\n{n4:.2f}"
     if n5 > m:
         string += f"\n{n5:.2f}"
-    return f"{m:.2f}{string}"
-
-
+    return f"A Média é {m:.2f}\nOs Números Maiores que a média são:{string}"
+# Função principal onde vai ser ser tratado entrada, processamento e saída de dados
 def main():
-    n1 = int(input())
-    n2 = int(input())
-    n3 = int(input())
-    n4 = int(input())
-    n5 = int(input())
-    
-    print(f"{maior_media(n1,n2,n3,n4,n5)}")
-
-
+    # entrada de dados
+    n1 = int(input("Digite a Primeira Nota: "))
+    n2 = int(input("Digite a Segunda Nota: "))
+    n3 = int(input("Digite a Terceira Nota: "))
+    n4 = int(input("Digite a Quarta Nota: "))
+    n5 = int(input("Digite a Quinta Nota: "))
+    # processamento de dados
+    n_e_m = maior_media(n1,n2,n3,n4,n5)
+    # saída de dados
+    print(f"{n_e_m}")
+# condição que verifica se o modulo/função é o principal se for vai chamar e executar a função main
 if __name__ == "__main__":
     main()

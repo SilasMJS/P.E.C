@@ -220,3 +220,72 @@
 #     main()
 
 
+
+# def func_maior_menor(n,n2,n3,n4,n5):
+#     maior = n
+#     menor = n
+#     if n2 > maior:
+#         maior = n2
+#     elif n2 < menor:
+#         menor = n2
+
+#     if n3 > maior:
+#         maior = n3
+#     elif n3 < menor:
+#         menor = n3
+
+#     if n4 > maior:
+#         maior = n4
+#     elif n4 < menor:
+#         menor = n4
+
+#     if n5 > maior:
+#         maior = n5
+#     elif n5 < menor:
+#         menor = n5
+#     return f"{maior}\n{menor}"
+
+
+# def main():
+# # Ler os cinco números
+#     num1 = int(input("Digite o primeiro número inteiro: "))
+#     num2 = int(input("Digite o segundo número inteiro: "))
+#     num3 = int(input("Digite o terceiro número inteiro: "))
+#     num4 = int(input("Digite o quarto número inteiro: "))
+#     num5 = int(input("Digite o quinto número inteiro: "))
+
+#     maior_menor = func_maior_menor(num1,num2,num3,num4,num5)
+    
+#     print(f"{maior_menor}")
+
+# # Inicializar as variáveis para armazenar o maior e o menor número
+# # maior = num1
+# # menor = num1
+
+# # Comparar cada número com os valores atuais de maior e menor
+# # if num2 > maior:
+# #     maior = num2
+# # elif num2 < menor:
+# #     menor = num2
+
+# # if num3 > maior:
+# #     maior = num3
+# # elif num3 < menor:
+# #     menor = num3
+
+# # if num4 > maior:
+# #     maior = num4
+# # elif num4 < menor:
+# #     menor = num4
+
+# # if num5 > maior:
+# #     maior = num5
+# # elif num5 < menor:
+# #     menor = num5
+
+# # Mostrar o maior e o menor número
+# # print(f"O maior número é: {maior}")
+# # print(f"O menor número é: {menor}")
+
+# if __name__ == "__main__":
+#     main()

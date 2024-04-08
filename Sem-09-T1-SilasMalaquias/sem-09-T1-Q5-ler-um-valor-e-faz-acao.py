@@ -1,3 +1,4 @@
+# funçao auxiliar onde vai retornar o resultado com base na condição
 def calcular(n):
     if n % 5 == 0:
         return (9*n)+7
@@ -9,16 +10,15 @@ def calcular(n):
         return n // 10
     else:
         return n ** 2
-
-
+# função principal onde ocorre a entrada, processamento e saída dedados
 def main():
-    n = int(input())
-    
+    # entrada de dados
+    n = int(input("Digite um Número: "))
+    # processamento de dados
     result = calcular(n)
-    
-    print(result)
-    
-    
+    # saída de dados
+    print(f"O resultado é {result}")
+# condição que verifica se a função/modulo é o principal se for vai chamar a função main
 if __name__ == "__main__":
     main()
     

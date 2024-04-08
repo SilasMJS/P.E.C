@@ -6,8 +6,6 @@ def diferenca(n1,n2,n3):
     elif dif3 < dif2: return f"{dif3}"
     else: return f"{dif2}"
             
-
-
 def main():
     n1 = int(input())
     n2 = int(input())
@@ -16,9 +14,8 @@ def main():
     dif = diferenca(n1,n2,n3)
     
     print(dif)
-    
-    
-    
-    
+      
+
 if __name__ == "__main__":
     main()
+    

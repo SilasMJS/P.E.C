@@ -289,3 +289,24 @@
 
 # if __name__ == "__main__":
 #     main()
+
+
+
+def calcular_valor_a_pagar(kg_morangos, kg_macas):
+    preco_morangos = 2.2 if kg_morangos > 5 else 2.5
+    preco_macas = 1.5 if kg_macas > 5 else 1.8
+    
+    valor_total = kg_morangos * preco_morangos + kg_macas * preco_macas
+    
+    if kg_morangos + kg_macas > 8 or valor_total > 25:
+        desconto = valor_total * 0.1
+        valor_total -= desconto
+    
+    return valor_total
+
+# Exemplo de uso do programa
+kg_morangos = float(input("Digite a quantidade de morangos (em Kg): "))
+kg_macas = float(input("Digite a quantidade de maçãs (em Kg): "))
+
+valor_a_pagar = calcular_valor_a_pagar(kg_morangos, kg_macas)
+print(f"Valor a ser pago pelo cliente: R$ {valor_a_pagar:.2f}")

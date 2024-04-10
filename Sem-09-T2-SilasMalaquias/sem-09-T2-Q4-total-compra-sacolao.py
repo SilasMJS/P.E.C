@@ -1,9 +1,9 @@
 def morango_preco(mor):
-    preco = 2.50
-    return preco if mor <= 5 else preco * 2.20
+    preco =  mor * 2.50 if mor <= 5 else mor * 2.20
+    return preco
 def maca_preco(maca):
-    preco = 1.80
-    return preco if maca <= 5 else preco * 1.50 
+    preco = maca * 1.80 if maca <= 5 else maca * 1.50 
+    return preco 
 
 def main():
     morango = float(input())
@@ -16,9 +16,9 @@ def main():
 
     if f_total > 8 or p_total > 25:
         p_total -= p_total * (10/100)
-        print(f"{p_total}")
+        print(f"{p_total:.2f}")
     else:
-        print(p_total)
+        print(f"{p_total:.2f}")
 
 if __name__ == "__main__":
     main()

@@ -11,12 +11,12 @@ def resposta_sim(a,b,c,d,e):
         string+=d
     if e == "S":
         string+=e
-    return string
+    return string.strip()
 def classificacao(a,b,c,d,e):
     sim = resposta_sim(a,b,c,d,e)
     if len(sim) == 2:
         return "Suspeito"
-    elif 3 >= len(sim) and len(sim) <= 4:
+    elif 3 == len(sim) or len(sim) == 4:
         return "Cúmplice"
     elif len(sim) == 5:
         return "Assassino"

@@ -292,21 +292,61 @@
 
 
 
-def calcular_valor_a_pagar(kg_morangos, kg_macas):
-    preco_morangos = 2.2 if kg_morangos > 5 else 2.5
-    preco_macas = 1.5 if kg_macas > 5 else 1.8
+# def calcular_valor_a_pagar(kg_morangos, kg_macas):
+#     preco_morangos = 2.2 if kg_morangos > 5 else 2.5
+#     preco_macas = 1.5 if kg_macas > 5 else 1.8
     
-    valor_total = kg_morangos * preco_morangos + kg_macas * preco_macas
+#     valor_total = kg_morangos * preco_morangos + kg_macas * preco_macas
     
-    if kg_morangos + kg_macas > 8 or valor_total > 25:
-        desconto = valor_total * 0.1
-        valor_total -= desconto
+#     if kg_morangos + kg_macas > 8 or valor_total > 25:
+#         desconto = valor_total * 0.1
+#         valor_total -= desconto
     
-    return valor_total
+#     return valor_total
 
-# Exemplo de uso do programa
-kg_morangos = float(input("Digite a quantidade de morangos (em Kg): "))
-kg_macas = float(input("Digite a quantidade de maçãs (em Kg): "))
+# # Exemplo de uso do programa
+# kg_morangos = float(input("Digite a quantidade de morangos (em Kg): "))
+# kg_macas = float(input("Digite a quantidade de maçãs (em Kg): "))
 
-valor_a_pagar = calcular_valor_a_pagar(kg_morangos, kg_macas)
-print(f"Valor a ser pago pelo cliente: R$ {valor_a_pagar:.2f}")
+# valor_a_pagar = calcular_valor_a_pagar(kg_morangos, kg_macas)
+# print(f"Valor a ser pago pelo cliente: R$ {valor_a_pagar:.2f}")
+
+
+# def numero_por_extenso(numero):
+#     unidades = ["zero", "uma", "duas", "três", "quatro", "cinco", "seis", "sete", "oito", "nove"]
+#     dezenas = ["", "dez", "vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"]
+#     centenas = ["", "cento", "duzentos", "trezentos", "quatrocentos", "quinhentos", "seiscentos", "setecentos", "oitocentos", "novecentos"]
+
+#     if numero >= 1000:
+#         return "Número fora do intervalo válido."
+
+#     centena = numero // 100
+#     dezena = (numero % 100) // 10
+#     unidade = (numero % 100) % 10
+
+#     resultado = ""
+
+#     if centena > 0:
+#         resultado += centenas[centena]
+#         if dezena > 0 or unidade > 0:
+#             resultado += ", "
+
+#     if dezena > 1:
+#         resultado += dezenas[dezena]
+#         if unidade > 0:
+#             resultado += " e " + unidades[unidade]
+#     elif dezena == 1:
+#         resultado += unidades[10 + unidade]
+#     elif unidade > 0:
+#         resultado += unidades[unidade]
+
+#     if centena == 0 and dezena == 0 and unidade == 0:
+#         resultado = unidades[0]  # Número zero
+
+#     return resultado.capitalize() + "."
+
+# # Exemplos de uso do programa
+# numero = int(input("Digite um número inteiro menor que 1000: "))
+# extenso = numero_por_extenso(numero)
+# print(f"{numero} = {extenso}")
+

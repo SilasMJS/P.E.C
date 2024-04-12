@@ -350,3 +350,55 @@
 # extenso = numero_por_extenso(numero)
 # print(f"{numero} = {extenso}")
 
+# def numero_por_extenso(numero):
+#     unidades = {
+#         0: 'zero', 1: 'um', 2: 'dois', 3: 'três', 4: 'quatro',
+#         5: 'cinco', 6: 'seis', 7: 'sete', 8: 'oito', 9: 'nove'
+#     }
+
+#     dezenas = {
+#         10: 'dez', 11: 'onze', 12: 'doze', 13: 'treze', 14: 'quatorze',
+#         15: 'quinze', 16: 'dezesseis', 17: 'dezessete', 18: 'dezoito', 19: 'dezenove',
+#         20: 'vinte', 30: 'trinta', 40: 'quarenta', 50: 'cinquenta',
+#         60: 'sessenta', 70: 'setenta', 80: 'oitenta', 90: 'noventa'
+#     }
+
+#     centenas = {
+#         100: 'cento', 200: 'duzentos', 300: 'trezentos', 400: 'quatrocentos',
+#         500: 'quinhentos', 600: 'seiscentos', 700: 'setecentos', 800: 'oitocentos', 900: 'novecentos'
+#     }
+
+#     if numero in unidades:
+#         return unidades[numero]
+#     elif numero in dezenas:
+#         return dezenas[numero]
+#     elif numero in centenas:
+#         return centenas[numero]
+#     elif 21 <= numero <= 99:
+#         dezena = dezenas[numero // 10 * 10]
+#         unidade = numero_por_extenso(numero % 10) if numero % 10 != 0 else ''
+#         return f"{dezena} e {unidade}" if unidade else dezena
+#     elif 101 <= numero <= 999:
+#         centena = centenas[numero // 100 * 100]
+#         dezena = numero_por_extenso(numero % 100) if numero % 100 != 0 else ''
+#         return f"{centena} e {dezena}" if dezena else centena
+#     else:
+#         return "Número não suportado"
+
+# numero = int(input("Digite um número inteiro menor que 1000: "))
+# if 0 <= numero <= 999:
+#     centenas = numero // 100
+#     dezenas = (numero % 100) // 10
+#     unidades = (numero % 100) % 10
+
+#     resultado = []
+#     if centenas > 0:
+#         resultado.append(f"{numero_por_extenso(centenas * 100)} centena{'s' if centenas > 1 else ''}")
+#     if dezenas > 0:
+#         resultado.append(f"{numero_por_extenso(dezenas * 10)} dezena{'s' if dezenas > 1 else ''}")
+#     if unidades > 0:
+#         resultado.append(f"{numero_por_extenso(unidades)} unidade{'s' if unidades > 1 else ''}")
+
+#     print(", ".join(resultado) + ".")
+# else:
+#     print("Número fora do intervalo suportado")

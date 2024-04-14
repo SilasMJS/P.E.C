@@ -402,3 +402,40 @@
 #     print(", ".join(resultado) + ".")
 # else:
 #     print("Número fora do intervalo suportado")
+def separar(num):
+    return num%10, num//10%10, num//100%10
+
+def extenso(n):
+    if n == 1: return 'uma'
+    if n == 2: return 'duas'
+    if n == 3: return 'três'
+    if n == 4: return 'quatro'
+    if n == 5: return 'cinco'
+    if n == 6: return 'seis'
+    if n == 7: return 'sete'
+    if n == 8: return 'oito'
+    if n == 9: return 'nove'
+
+def no_plural(string,n):
+    if n == 0: return ""
+    elif n == 1: return extenso(n) +" "+ string
+    else: return extenso(n) +" "+ string + "s"
+
+def main():
+    num = int(input())
+    u, d, c = separar(num)
+    if u and d : print(f"{no_plural("unidade",u)}.")
+    elif num > 9 and num < 100: 
+        if u == 0: print(f"{no_plural("dezena",d)}.")
+        else: print(f"{no_plural("dezena",d)} e {no_plural("unidade",u)}.")
+    elif num > 99: 
+        if d == 0 and u == 0: print(f"{no_plural("centena",c)}.")
+        elif u == 0: print(f"{no_plural("centena",c)} e {no_plural("dezena",d)}.")
+        elif d == 0: print(f"{no_plural("centena",c)} e {no_plural("unidade",u)}.")
+        else: print(f"{no_plural("centena",c)}, {no_plural("dezena",d)} e {no_plural("unidade",u)}.")
+    else:
+        print(f"{no_plural("unidade",u)}.")
+    
+    
+if __name__ == "__main__":
+    main()

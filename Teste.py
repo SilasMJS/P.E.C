@@ -424,7 +424,8 @@ def no_plural(string,n):
 def main():
     num = int(input())
     u, d, c = separar(num)
-    if u and d : print(f"{no_plural("unidade",u)}.")
+    if num > 0 and num < 10: 
+        print(f"{no_plural("unidade",u)}.")
     elif num > 9 and num < 100: 
         if u == 0: print(f"{no_plural("dezena",d)}.")
         else: print(f"{no_plural("dezena",d)} e {no_plural("unidade",u)}.")

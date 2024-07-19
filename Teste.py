@@ -442,15 +442,17 @@
 #     main()
 
 
-def simular_prestacoes(valor_compra):
-    for parcelas in range(1, 25):
-        valor_prestacao = valor_compra / parcelas
-        print(f"{parcelas}x de R$ {valor_prestacao:.2f}")
-def main():
+#def simular_prestacoes(valor_compra):
+#    for parcelas in range(1, 25):
+#        valor_prestacao = valor_compra / parcelas
+#        print(f"{parcelas}x de R$ {valor_prestacao:.2f}")
+#def main():
     # Solicita o valor da compra ao usuário
-    valor_compra = float(input("Digite o valor da compra: R$ "))
+#    valor_compra = float(input("Digite o valor da compra: R$ "))
 
     # Chama a função para simular as prestações
-    simular_prestacoes(valor_compra)
-if __name__ == "__main__":
-    main()
+#    simular_prestacoes(valor_compra)
+#if __name__ == "__main__":
+#    main()
+
+

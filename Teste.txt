@@ -1,0 +1,10 @@
+Código da Disciplina: 1
+Nome da Disciplina: 1
+Professor: 1
+Quantidade de Alunos: 1
+Horário Inicial: 1
+Horário Final: 1
+Número da Sala: 1
+Carga Horária: 1
+Alunos:
+

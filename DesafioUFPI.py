@@ -340,6 +340,7 @@ def alterar_Notas_alunos():
                           Para alterar a Nota: """)
                 nova_n = input("Digite a Nova Nota: ")
                 aluno['nota'+n] = nova_n
+                aluno['media'] = media(float(aluno['nota1']), float(aluno['nota2']), float(aluno['nota3']))
                 encontrado = True
         
         if not encontrado:

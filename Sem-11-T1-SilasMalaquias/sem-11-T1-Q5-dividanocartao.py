@@ -23,6 +23,6 @@ def main():
     divida = float(input("Digite o valor da Dívida: "))
     # saída de dados
     print(divida_e_salario(salario,divida))
-    
+# condição que verificar se a função/modulo é o principal se for vai chamar e executar
 if __name__ == "__main__":
     main()

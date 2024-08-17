@@ -1,13 +1,16 @@
-def soma(n):
-    n += n
-    return n
+# def soma(n):
+#     n += n
+#     return n
+
 def main():
-    n = 1
-    while n != 0:
+    resultado = 0
+    while True:
         n = int(input())
-        if n == 0:
-            pass
-        resultado += soma(n)
+        if n != 0:
+            resultado += n
+        else:
+            break
+        
         
     print(f"{resultado}")
         

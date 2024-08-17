@@ -572,141 +572,155 @@
 
 # Criando dicionario
 
-turmas = {}  # Global para armazenar as informações das turmas
-n = 0  # Variável global para contar alunos
+# turmas = {}  # Global para armazenar as informações das turmas
+# n = 0  # Variável global para contar alunos
 
-def media(n1, n2, n3):
-    # Função para calcular a média ponderada das notas
-    media = ((n1*1) + (n2*2) + (n3*3)) / 6
-    return f"{media:.2f}"
+# def media(n1, n2, n3):
+#     # Função para calcular a média ponderada das notas
+#     media = ((n1*1) + (n2*2) + (n3*3)) / 6
+#     return f"{media:.2f}"
 
-def menu():
-    # Função para exibir o menu do programa
-    print("**************Bem-Vindo!**************")
-    print("*********Menu Controle Acadêmico*********")
-    print("1 - Definir Informações da Turma")
-    print("2 - Inserir Aluno e Notas")
-    print("3 - Exibir Alunos e Médias")
-    print("4 - Exibir Alunos Aprovados")
-    print("5 - Exibir Alunos Reprovados")
-    print("6 - Alterar Notas de Aluno")
-    print("7 - Salvar dados em Disco")
-    print("8 - Sair do Programa(fim)")
+# def menu():
+#     # Função para exibir o menu do programa
+#     print("**************Bem-Vindo!**************")
+#     print("*********Menu Controle Acadêmico*********")
+#     print("1 - Definir Informações da Turma")
+#     print("2 - Inserir Aluno e Notas")
+#     print("3 - Exibir Alunos e Médias")
+#     print("4 - Exibir Alunos Aprovados")
+#     print("5 - Exibir Alunos Reprovados")
+#     print("6 - Alterar Notas de Aluno")
+#     print("7 - Salvar dados em Disco")
+#     print("8 - Sair do Programa(fim)")
 
-def definir_Informacoes():
-    # Função para definir as informações da turma
-    global turmas
+# def definir_Informacoes():
+#     # Função para definir as informações da turma
+#     global turmas
     
-    cod_disciplina = input("Digite o Código da Disciplina: ") 
+#     cod_disciplina = input("Digite o Código da Disciplina: ") 
     
-    if cod_disciplina in turmas:
-        print("Código já existe!")
-        print("Tente Novamente..")
-        definir_Informacoes()
-    else:
-        nome_disciplina = input("Digite o Nome da Disciplina: ")
-        professor = input("Digite o Nome do Professor: ")
-        quant_aluno = input("Digite a Quantidade de Alunos: ")
-        horario = input("Digite o Horário Inicial: ")
-        fim_disciplina = input("Digite o Horário Final: ")
-        numero_sala = input("Digite o Número da Sala:  ")
-        carga_horaria = input("Digite a Carga Horária: ")
+#     if cod_disciplina in turmas:
+#         print("Código já existe!")
+#         print("Tente Novamente..")
+#         definir_Informacoes()
+#     else:
+#         nome_disciplina = input("Digite o Nome da Disciplina: ")
+#         professor = input("Digite o Nome do Professor: ")
+#         quant_aluno = input("Digite a Quantidade de Alunos: ")
+#         horario = input("Digite o Horário Inicial: ")
+#         fim_disciplina = input("Digite o Horário Final: ")
+#         numero_sala = input("Digite o Número da Sala:  ")
+#         carga_horaria = input("Digite a Carga Horária: ")
         
-        turmas[cod_disciplina] = {
-            'codigo_disci': cod_disciplina,
-            'nome_disciplina': nome_disciplina, 
-            'professor': professor,
-            'quant_aluno': quant_aluno,
-            'horario': horario,
-            'fim_disciplina': fim_disciplina,
-            'numero_sala': numero_sala,
-            'carga_horaria': carga_horaria,
-            'alunos': []  # Lista para armazenar os alunos desta disciplina
-        }
+#         turmas[cod_disciplina] = {
+#             'codigo_disci': cod_disciplina,
+#             'nome_disciplina': nome_disciplina, 
+#             'professor': professor,
+#             'quant_aluno': quant_aluno,
+#             'horario': horario,
+#             'fim_disciplina': fim_disciplina,
+#             'numero_sala': numero_sala,
+#             'carga_horaria': carga_horaria,
+#             'alunos': []  # Lista para armazenar os alunos desta disciplina
+#         }
         
-        print(f"""
-            Informações da Disciplina Adicionadas com Sucesso!
-            Código da Disciplina: {cod_disciplina}
-            Nome da Disciplina: {nome_disciplina}
-            Professor: {professor}
-            Quantidade de Alunos: {quant_aluno}
-            Horário Inicial: {horario}
-            Horário Final: {fim_disciplina}
-            Número da Sala: {numero_sala}
-            Carga Horária: {carga_horaria}
-            """)
+#         print(f"""
+#             Informações da Disciplina Adicionadas com Sucesso!
+#             Código da Disciplina: {cod_disciplina}
+#             Nome da Disciplina: {nome_disciplina}
+#             Professor: {professor}
+#             Quantidade de Alunos: {quant_aluno}
+#             Horário Inicial: {horario}
+#             Horário Final: {fim_disciplina}
+#             Número da Sala: {numero_sala}
+#             Carga Horária: {carga_horaria}
+#             """)
 
-def inserir_Alunos():
-    # Função para inserir alunos e suas notas na disciplina
-    global n
-    n += 1
-    n_str = str(n)
+# def inserir_Alunos():
+#     # Função para inserir alunos e suas notas na disciplina
+#     global n
+#     n += 1
+#     n_str = str(n)
     
-    cod_disciplina = input("Digite o Código da Disciplina: ")
+#     cod_disciplina = input("Digite o Código da Disciplina: ")
     
-    if cod_disciplina in turmas:
-        nome = input("Digite o Nome do Aluno: ")
-        n1 = float(input("Digite a Primeira Nota: "))
-        n2 = float(input("Digite a Segunda Nota: "))
-        n3 = float(input("Digite a Terceira Nota: "))
-        m = media(n1, n2, n3)
+#     if cod_disciplina in turmas:
+#         nome = input("Digite o Nome do Aluno: ")
+#         n1 = float(input("Digite a Primeira Nota: "))
+#         n2 = float(input("Digite a Segunda Nota: "))
+#         n3 = float(input("Digite a Terceira Nota: "))
+#         m = media(n1, n2, n3)
 
-        # Adiciona o aluno à lista de alunos da disciplina
-        turmas[cod_disciplina]['alunos'].append({
-            'nome': nome,
-            'nota1': n1,
-            'nota2': n2,
-            'nota3': n3,
-            'media': m
-        })
+#         # Adiciona o aluno à lista de alunos da disciplina
+#         turmas[cod_disciplina]['alunos'].append({
+#             'nome': nome,
+#             'nota1': n1,
+#             'nota2': n2,
+#             'nota3': n3,
+#             'media': m
+#         })
 
-        print(f"Notas Adicionadas com Sucesso para o Aluno {nome}")
-        print(turmas[cod_disciplina]['alunos'])
+#         print(f"Notas Adicionadas com Sucesso para o Aluno {nome}")
+#         print(turmas[cod_disciplina]['alunos'])
         
-    else:
-        print("Código da Disciplina Inválido!!")
-        print("Tente Novamente.")
-        inserir_Alunos()
+#     else:
+#         print("Código da Disciplina Inválido!!")
+#         print("Tente Novamente.")
+#         inserir_Alunos()
 
-def exibir_Media():
-    # Função para exibir a média dos alunos de uma disciplina
-    cod_disciplina = input("Digite o Código da Disciplina: ")
+# def exibir_Media():
+#     # Função para exibir a média dos alunos de uma disciplina
+#     cod_disciplina = input("Digite o Código da Disciplina: ")
     
-    if cod_disciplina in turmas:
-        print(f"Disciplina: {turmas[cod_disciplina]['nome_disciplina']}")
-        for aluno in turmas[cod_disciplina]['alunos']:
-            print(f"Nome: {aluno['nome']}, Média: {aluno['media']}")
-    else:
-        print("Código da Disciplina Inválido! ")
-        print("Tente Novamente. ")
+#     if cod_disciplina in turmas:
+#         print(f"Disciplina: {turmas[cod_disciplina]['nome_disciplina']}")
+#         for aluno in turmas[cod_disciplina]['alunos']:
+#             print(f"Nome: {aluno['nome']}, Média: {aluno['media']}")
+#     else:
+#         print("Código da Disciplina Inválido! ")
+#         print("Tente Novamente. ")
         
 
-def main():
-    # Função principal do programa
-    global n
-    while True:
-        menu()
-        opc = input("Escolha uma Opção: ")
+# def main():
+#     # Função principal do programa
+#     global n
+#     while True:
+#         menu()
+#         opc = input("Escolha uma Opção: ")
         
-        if opc == '1':
-            definir_Informacoes()
-        elif opc == '2':
-            inserir_Alunos()
-        elif opc == '3':
-            exibir_Media()
-        elif opc == '4':
-            pass
-        elif opc == '5':
-            pass
-        elif opc == '6':
-            pass
-        elif opc == '7':
-            pass
-        elif opc == '8':
-            print("Encerrando o Programa... Tchau!!")
-            break
-        else:
-            print("Opção Inválida. Escolha Novamente.")
+#         if opc == '1':
+#             definir_Informacoes()
+#         elif opc == '2':
+#             inserir_Alunos()
+#         elif opc == '3':
+#             exibir_Media()
+#         elif opc == '4':
+#             pass
+#         elif opc == '5':
+#             pass
+#         elif opc == '6':
+#             pass
+#         elif opc == '7':
+#             pass
+#         elif opc == '8':
+#             print("Encerrando o Programa... Tchau!!")
+#             break
+#         else:
+#             print("Opção Inválida. Escolha Novamente.")
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
+
+# dados = {"Nome": "Silas", "Ano": 2000, "Valor_logico" : True}
+
+# for x, y in dados.items():
+#     print(f"{x}: {y}")
+
+#          # 0        1       2     3    4  5
+# lista5 = [True, "Chicago", 2.5, False, 4, 8]
+
+# print(lista5[1:4]) #Retorna o index destacado ate o index -1
+# print(lista5[1:6:2]) #Retorna o index destacado ate o index -1
+# leng(lista5) tamanho - max(lista5) valor maior - sum(lista5) somatorio - min(lista5) valor minimo
+
+# list() transforma em lista um elemento caractere

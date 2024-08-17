@@ -1,15 +1,15 @@
 def main():
     Total_pagar = 0
     while True:
-        print("CÓDIGO   PRODUTO        PREÇO (R$)")
-        print("H        Hamburguer     5.50")
-        print("C        Cheeseburger   6.80")
-        print("M        Misto Quente   4.50")
-        print("A        Americano      7.00")
-        print("Q        Queijo Prato   4.00")
-        print("X        PARA TOTAL DA CONTA")
+        print("CÓDIGO  PRODUTO         PREÇO (R$)")
+        print("H       Hamburger       5,50")
+        print("C       Cheeseburger    6,80")
+        print("M       Misto Quente    4,50")
+        print("A       Americano       7,00")
+        print("Q       Queijo Prato    4,00")
+        print("X       PARA TOTAL DA CONTA")
         
-        opc = input()
+        opc = input().strip()
         
         if opc in ["h","H"]:
             Total_pagar += 5.50

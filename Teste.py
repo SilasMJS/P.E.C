@@ -724,3 +724,31 @@
 # leng(lista5) tamanho - max(lista5) valor maior - sum(lista5) somatorio - min(lista5) valor minimo
 
 # list() transforma em lista um elemento caractere
+
+
+
+# def main():
+#     dep_inicial = float(input())
+#     taxa_juros = float(input())
+#     ano = 0
+#     valor_acumulado = dep_inicial
+#     tabela = []
+#     # i = 0
+#     while valor_acumulado <= 2 * dep_inicial:
+#         ano += 1
+#         valor_acumulado += (valor_acumulado*(taxa_juros/100))
+#         tabela.append(valor_acumulado)
+        
+    
+#     print(f"\nDobra em {ano} Ano(s).\n")
+#     a = 1
+#     print(f"| Início | R$ {dep_inicial:.2f} |")
+#     for i in tabela:
+#         print(f"| {a} Ano(s) | R$ {i:.2f} |")
+#         a+=1
+#     print("\n")
+    
+    
+# if __name__ == "__main__":
+#     main()
+

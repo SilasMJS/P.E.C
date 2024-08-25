@@ -752,8 +752,70 @@
 # if __name__ == "__main__":
 #     main()
 
-for i in range(1,11):
-    if i < 10:
-        print(i, end=", ")
-    else:
-        print(i)
+# for i in range(1,11):
+#     if i < 10:
+#         print(i, end=", ")
+#     else:
+#         print(i)
+
+
+import turtle
+import math
+
+# Configuração inicial
+turtle.speed(11)
+turtle.bgcolor("black")
+
+# Função para desenhar uma estrela
+def draw_star(size, color):
+    turtle.fillcolor(color)
+    turtle.begin_fill()
+    for _ in range(5):
+        turtle.forward(size)
+        turtle.right(144)
+    turtle.end_fill()
+
+# Função para desenhar um círculo
+def draw_circle(radius, color):
+    turtle.fillcolor(color)
+    turtle.begin_fill()
+    turtle.circle(radius)
+    turtle.end_fill()
+
+# Desenhar o núcleo da galáxia
+turtle.penup()
+turtle.goto(0, -30)
+turtle.pendown()
+turtle.color("yellow")
+draw_star(60, "yellow")
+
+# Desenhar órbitas
+turtle.color("white")
+for i in range(1, 6):
+    turtle.penup()
+    turtle.goto(0, -30 * i - 30)
+    turtle.pendown()
+    turtle.circle(30 * i + 30)
+
+# Desenhar planetas nas órbitas
+planet_colors = ["blue", "green", "red", "purple", "orange"]
+planet_positions = [(70, 0), (-120, 50), (100, -80), (-50, -120), (150, 150)]
+planet_sizes = [20, 15, 25, 10, 30]
+
+for pos, size, color in zip(planet_positions, planet_sizes, planet_colors):
+    turtle.penup()
+    turtle.goto(pos)
+    turtle.pendown()
+    draw_circle(size, color)
+
+# Desenhar estrelas menores ao redor
+star_positions = [(-200, 200), (250, -250), (-250, -150), (200, 150)]
+for pos in star_positions:
+    turtle.penup()
+    turtle.goto(pos)
+    turtle.pendown()
+    draw_star(15, "white")
+
+# Finalizar desenho
+turtle.hideturtle()
+turtle.done()

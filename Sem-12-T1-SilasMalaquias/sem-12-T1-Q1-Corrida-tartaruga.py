@@ -14,10 +14,10 @@
 #     lebre //= 10
         
 #     print(lebre)
-        
-
 # if __name__ == "__main__":
 #     main()
+
+
 
 # ClassRoom
 # função auxiliar 
@@ -31,14 +31,14 @@ def ultrapassar(tartaruga):
         if lebre > tartaruga:
             lebre //= 10
             return lebre
-
 # função principal
 def main():
     # entrada de dados
     tartaruga = int(input("Digite Quantos metros de vantagem a Tartaruga tem: "))
     # saída de dados
     print(f"Em {ultrapassar(tartaruga)} Minutos a Lebre ultrapassara a Tartaruga.")
-
 # condição que verifica se o modulo/função é o principal se for vai chamar e executar
 if __name__ == "__main__":
     main()
+
+

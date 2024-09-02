@@ -1,19 +1,22 @@
 def converter_dado(dado):
-    try:
-        # Tenta converter para inteiro
-        return int(dado)
-    except ValueError:
-        try:
-            # Se falhar, tenta converter para float
-            return float(dado)
-        except ValueError:
-            # Se falhar novamente, mantém como string
-            return dado
-    # if type(dado) == int:
+    # try:
+    #     # Tenta converter para inteiro
     #     return int(dado)
-    # elif type(dado) == float:
-    #     return float(dado)
-    # return dado
+    # except ValueError:
+    #     try:
+    #         # Se falhar, tenta converter para float
+    #         return float(dado)
+    #     except ValueError:
+    #         # Se falhar novamente, mantém como string
+    #         return dado
+    try:
+        if "." in dado:
+            return float(dado)
+        else:
+            return int(dado)
+    except ValueError:
+        return dado
+ 
 
 def esta_ordenado(lista):
     for i in range(len(lista) - 1):

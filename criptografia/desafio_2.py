@@ -18,3 +18,12 @@ for char in mensagem:
         mensagemCriptografada = mensagemCriptografada + char
         
 print("Sua mensagem Criptografada é: ", mensagemCriptografada)
+
+
+try:
+    if "." in valor:
+        valor = float(valor)
+    else:
+        valor = int(valor)
+except ValueError:
+    valor

@@ -19,11 +19,3 @@ for char in mensagem:
         
 print("Sua mensagem Criptografada é: ", mensagemCriptografada)
 
-
-try:
-    if "." in valor:
-        valor = float(valor)
-    else:
-        valor = int(valor)
-except ValueError:
-    valor

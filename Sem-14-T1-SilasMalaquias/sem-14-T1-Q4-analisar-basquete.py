@@ -1,12 +1,13 @@
+# jogador mais alto
 def mais_Alto(jogadores, alturas):
     maior = alturas[0]
     jogador = jogadores[0]
-    for i in range(1, 12):
+    for i in range(len(jogadores)):
         if alturas[i] > maior:
             maior = alturas[i]
             jogador = jogadores[i]
-
-    return f"{jogador}\n{maior}"
+    return f"JOGADOR MAIS ALTO DO TIME\n{jogador}\n{maior:.2f}"
+# media de alturas
 def media(alturas):
     soma = 0
     media = 0
@@ -14,29 +15,24 @@ def media(alturas):
         soma += i
     media = soma / len(alturas)
     return media
+# alturas maiores que a media
 def medias_maiores(jogadores, alturas):
-    alt_maiores = []
-    maiores_jog = []
-    for i in len(alturas):
+    print("JOGADORES MAIS ALTOS QUE A MÉDIA DO TIME")
+    for i in range(len(jogadores)):
         if alturas[i] > media(alturas):
-            alt_maiores.append(alturas[i])
-            maiores_jog.append(jogadores[i])
-    return f"{maiores_jog}\n{alt_maiores}"
-
-
-
+            print(f"{jogadores[i]}\n{alturas[i]:.2f}")
+# função principal
 def main():
     jogadores = []
     alturas = []
-    for i in range(2):
+    for i in range(12):
         nome = input().strip()
         jogadores.append(nome)
         altura = float(input())
         alturas.append(altura)
     print(mais_Alto(jogadores,alturas))
-
-    
-
-
+    print(f"ALTURA MÉDIA DO TIME\n{media(alturas):.2f}")
+    medias_maiores(jogadores,alturas)
+# condição que varificar se a função/modulo é o principal se for vai chamar e executar
 if __name__ == "__main__":
     main()

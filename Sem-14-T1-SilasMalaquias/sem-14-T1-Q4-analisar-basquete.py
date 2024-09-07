@@ -25,11 +25,15 @@ def medias_maiores(jogadores, alturas):
 def main():
     jogadores = []
     alturas = []
+    # estrutura de repetição
     for i in range(12):
-        nome = input().strip()
+        # entrada de dados
+        nome = input("Digite Seu Nome: ").strip()
         jogadores.append(nome)
-        altura = float(input())
+        # entrada de dados
+        altura = float(input("Digite Sua Altura: "))
         alturas.append(altura)
+    # saída de dados, processamento de dados
     print(mais_Alto(jogadores,alturas))
     print(f"ALTURA MÉDIA DO TIME\n{media(alturas):.2f}")
     medias_maiores(jogadores,alturas)

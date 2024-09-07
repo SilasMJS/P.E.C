@@ -819,3 +819,37 @@
 # # Finalizar desenho
 # turtle.hideturtle()
 # turtle.done()
+
+
+
+def eliminar_repetidos(lista):
+# Remove elementos duplicados de uma lista.
+
+# Args:
+# lista: A lista de números inteiros.
+
+# Returns:
+#     Uma nova lista com os elementos únicos.
+
+
+    count = len(lista)
+    for i in range(len(lista)):
+        if i < count:
+            if lista.count(lista[i]) >= 2:
+                del lista[i]
+                count -= 1
+                i -= 1  # Retrocede um índice após a remoção
+
+    return lista
+
+def main():
+    lista = []
+
+    for i in range(20):
+        n = int(input())
+        lista.append(n)
+
+    print(eliminar_repetidos(lista))
+
+if __name__ == "__main__":
+    main()

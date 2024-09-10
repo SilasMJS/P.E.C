@@ -822,7 +822,7 @@
 
 
 
-def eliminar_repetidos(lista):
+# def eliminar_repetidos(lista):
 # Remove elementos duplicados de uma lista.
 
 # Args:
@@ -832,24 +832,91 @@ def eliminar_repetidos(lista):
 #     Uma nova lista com os elementos únicos.
 
 
-    count = len(lista)
-    for i in range(len(lista)):
-        if i < count:
-            if lista.count(lista[i]) >= 2:
-                del lista[i]
-                count -= 1
-                i -= 1  # Retrocede um índice após a remoção
+#     count = len(lista)
+#     for i in range(len(lista)):
+#         if i < count:
+#             if lista.count(lista[i]) >= 2:
+#                 del lista[i]
+#                 count -= 1
+#                 i -= 1  # Retrocede um índice após a remoção
 
-    return lista
+#     return lista
 
+# def main():
+#     lista = []
+
+#     for i in range(20):
+#         n = int(input())
+#         lista.append(n)
+
+#     print(eliminar_repetidos(lista))
+
+# if __name__ == "__main__":
+#     main()
+
+# def converter_celsius(f):
+#     return (f - 32) * 5 / 9
+
+# def converter_fahrenheit(c):
+#     return (c * 9 / 5) + 32
+
+# def maior_temp(temp1, temp2):
+#     valor1, escala1 = temp1
+#     valor2, escala2 = temp2
+    
+#     # Se as escalas são iguais, compara diretamente
+#     if escala1 == escala2:
+#         return temp1 if valor1 > valor2 else temp2
+    
+#     # Se escala1 é Celsius e escala2 é Fahrenheit
+#     if escala1 == "C" and escala2 == "F":
+#         valor2_em_celsius = converter_celsius(valor2)  # Converte temp2 para Celsius
+#         return temp1 if valor1 > valor2_em_celsius else (valor2, escala2)
+    
+#     # Se escala1 é Fahrenheit e escala2 é Celsius
+#     elif escala1 == "F" and escala2 == "C":
+#         valor1_em_celsius = converter_celsius(valor1)  # Converte temp1 para Celsius
+#         return (valor1, escala1) if valor1_em_celsius > valor2 else temp2
+
+# def main():
+#     valor1 = float(input())
+#     escala1 = input().strip().upper()[0]
+#     temp1 = (valor1, escala1)
+    
+#     valor2 = float(input())
+#     escala2 = input().strip().upper()[0]
+#     temp2 = (valor2, escala2)
+    
+#     print(maior_temp(temp1, temp2))
+    
+# if __name__ == "__main__":
+#     main()
+
+def conversao(t1,escala1,t2,escala2):
+    if escala1 == escala2:
+        tupla1 = (t1,escala1)
+        tupla2 = (t2,escala2)
+        return tupla1 if tupla1 > tupla2 else tupla2
+    
+    elif escala1 == 'F' and escala2 == 'C':
+        t1_c = (t1 - 32) * (5/9)
+        tupla1 = (t1,escala1)
+        tupla2 = (t2,escala2)
+        return tupla1 if t1_c > t2 else tupla2
+    
+    elif escala1 == 'C' and escala2 == 'F':
+        t2_c = (t2 - 32) * (5/9)
+        tupla1 = (t1,escala1)
+        tupla2 = (t2,escala2)
+        return tupla1 if t1 > t2_c else tupla2
+        
 def main():
-    lista = []
-
-    for i in range(20):
-        n = int(input())
-        lista.append(n)
-
-    print(eliminar_repetidos(lista))
-
+    t1 = float(input())
+    escala1 = str(input()).strip().upper()[0]
+    t2 = float(input())
+    escala2 = str(input()).strip().upper()[0]
+    
+    print(conversao(t1,escala1,t2,escala2))
+    
 if __name__ == "__main__":
     main()

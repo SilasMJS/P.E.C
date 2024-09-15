@@ -29,8 +29,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/salat/OneDrive/Documentos/1-PROGRAMACAO.E.C/1-PYTHON",
-      "program": "c:/Users/salat/OneDrive/Documentos/1-PROGRAMACAO.E.C/1-PYTHON/build/Debug/outDebug",
+      "cwd": "c:/Users/salat/OneDrive/Documentos/PROGRAMACAO.E.C/PYTHON/Sem-15-T1-SilasMalaquias",
+      "program": "c:/Users/salat/OneDrive/Documentos/PROGRAMACAO.E.C/PYTHON/Sem-15-T1-SilasMalaquias/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -3,32 +3,32 @@ def converter_celsius(f):
 def converter_fahrenheit(c):
     return (c*9/5)+32
 
-def soma_temp(temp1, temp2):
-    valor1, escala1 = temp1
-    valor2, escala2 = temp2
+def somar_Temp(temp1, temp2):
+    g1, e1 = temp1
+    g2, e2 = temp2
     
+    if e1 == e2:
+        return float(f"{(g1 + g2):.4f}"), e2
+    if e1 == 'C' and e2 == 'F':
+        n_g1 = converter_fahrenheit(g1)
+        soma = g1 + n_g1
+        return float(f"{soma:.4f}"), e2
+    elif e1 == 'F' and e2 == 'C':
+        n_g1 = converter_celsius(g1)
+        soma = g1 + n_g1
+        return float(f"{soma:.4f}"), e2
     
-    if escala1 == escala2:
-        soma = valor1 + valor2
-        return float(f"{soma:.4f}"), escala1
-    if escala1 == "C" and escala2 == "F":
-        valor1_convertido = converter_fahrenheit(valor1)  
-        soma = valor1_convertido + valor2
-        return float(f"{soma:.4f}"), escala2
-    elif escala1 == "F" and escala2 == "C":
-        valor1_convertido = converter_celsius(valor1)  
-        soma = valor1_convertido + valor2
-        return float(f"{soma:.4f}"), escala2
-    
+
 def main():
-    valor1 = float(input())
-    escala1 = input().strip().upper()[0]
-    temp1 = valor1, escala1
-    valor2 = float(input())
-    escala2 = input().strip().upper()[0]
-    temp2 = valor2, escala2
+    grau_1 = float(input("Digite o Primeiro Grau: "))
+    escala_1 = input("Digite a Escala (C) ou (F): ").strip().upper()[0]
+    temp1 = grau_1, escala_1
+    grau_2 = float(input("Digite o Segundo Grau: "))
+    escala_2 = input("Digite a Escala (C) ou (F): ").strip().upper()[0]
+    temp2 = grau_2, escala_2
+    temperatura = somar_Temp(temp1, temp2)
+    print(temperatura)
     
-    print(soma_temp(temp1, temp2))
     
 if __name__ == "__main__":
     main()

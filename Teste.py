@@ -892,31 +892,213 @@
 # if __name__ == "__main__":
 #     main()
 
-def conversao(t1,escala1,t2,escala2):
-    if escala1 == escala2:
-        tupla1 = (t1,escala1)
-        tupla2 = (t2,escala2)
-        return tupla1 if tupla1 > tupla2 else tupla2
+# def conversao(t1,escala1,t2,escala2):
+#     if escala1 == escala2:
+#         tupla1 = (t1,escala1)
+#         tupla2 = (t2,escala2)
+#         return tupla1 if tupla1 > tupla2 else tupla2
     
-    elif escala1 == 'F' and escala2 == 'C':
-        t1_c = (t1 - 32) * (5/9)
-        tupla1 = (t1,escala1)
-        tupla2 = (t2,escala2)
-        return tupla1 if t1_c > t2 else tupla2
+#     elif escala1 == 'F' and escala2 == 'C':
+#         t1_c = (t1 - 32) * (5/9)
+#         tupla1 = (t1,escala1)
+#         tupla2 = (t2,escala2)
+#         return tupla1 if t1_c > t2 else tupla2
     
-    elif escala1 == 'C' and escala2 == 'F':
-        t2_c = (t2 - 32) * (5/9)
-        tupla1 = (t1,escala1)
-        tupla2 = (t2,escala2)
-        return tupla1 if t1 > t2_c else tupla2
+#     elif escala1 == 'C' and escala2 == 'F':
+#         t2_c = (t2 - 32) * (5/9)
+#         tupla1 = (t1,escala1)
+#         tupla2 = (t2,escala2)
+#         return tupla1 if t1 > t2_c else tupla2
         
-def main():
-    t1 = float(input())
-    escala1 = str(input()).strip().upper()[0]
-    t2 = float(input())
-    escala2 = str(input()).strip().upper()[0]
+# def main():
+#     t1 = float(input())
+#     escala1 = str(input()).strip().upper()[0]
+#     t2 = float(input())
+#     escala2 = str(input()).strip().upper()[0]
     
-    print(conversao(t1,escala1,t2,escala2))
+#     print(conversao(t1,escala1,t2,escala2))
     
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
+
+# def xor(a, b):
+#     # Função XOR entre duas sequências de bits
+#     result = []
+#     for i in range(1, len(b)):
+#         if a[i] == b[i]:
+#             result.append('0')
+#         else:
+#             result.append('1')
+#     return ''.join(result)
+
+# def crc_division(data, divisor):
+#     # Aplica a divisão binária (XOR) para calcular o CRC
+#     pick = len(divisor)
+#     tmp = data[:pick]
+
+#     while pick < len(data):
+#         if tmp[0] == '1':
+#             # Realizar XOR e pegar os próximos bits
+#             tmp = xor(divisor, tmp) + data[pick]
+#         else:
+#             # Se o bit mais à esquerda for 0, pega mais bits
+#             tmp = xor('0'*pick, tmp) + data[pick]
+        
+#         pick += 1
+
+#     # Última operação de XOR para os bits restantes
+#     if tmp[0] == '1':
+#         tmp = xor(divisor, tmp)
+#     else:
+#         tmp = xor('0'*pick, tmp)
+
+#     return tmp
+
+# def calculate_crc(message, divisor):
+#     # Adiciona zeros ao final da mensagem para cálculo do CRC
+#     data = message + '0'*(len(divisor)-1)
+#     remainder = crc_division(data, divisor)
+#     return remainder
+
+# # Testar o programa
+# message = "110011001010101"  # Mensagem original
+# divisor = "10101"  # Polinômio divisor
+
+# crc = calculate_crc(message, divisor)
+# print(f"Mensagem original: {message}")
+# print(f"Polinômio divisor: {divisor}")
+# print(f"CRC calculado: {crc}")
+# print(f"Mensagem com CRC: {message + crc}")
+
+# def xor(a, b):
+#     # Função XOR entre duas sequências de bits
+#     result = []
+#     for i in range(1, len(b)):
+#         if a[i] == b[i]:
+#             result.append('0')
+#         else:
+#             result.append('1')
+#     return ''.join(result)
+
+# def crc_division(data, divisor):
+#     # Aplica a divisão binária (XOR) para calcular o CRC, mostrando o passo a passo
+#     pick = len(divisor)
+#     tmp = data[:pick]
+
+#     print(f"Iniciando divisão: {data} / {divisor}")
+#     step = 1
+#     while pick < len(data):
+#         print(f"\nPasso {step}:")
+#         print(f"Bloco atual: {tmp}")
+        
+#         if tmp[0] == '1':
+#             # Realizar XOR e pegar os próximos bits
+#             print(f"Dividindo por {divisor} (XOR)")
+#             tmp = xor(divisor, tmp) + data[pick]
+#         else:
+#             # Se o bit mais à esquerda for 0, pega mais bits
+#             print(f"Dividindo por {'0'*pick} (XOR com zeros)")
+#             tmp = xor('0'*pick, tmp) + data[pick]
+        
+#         print(f"Resto parcial: {tmp}")
+#         pick += 1
+#         step += 1
+
+#     # Última operação de XOR para os bits restantes
+#     print(f"\nPasso {step}:")
+#     print(f"Bloco final: {tmp}")
+    
+#     if tmp[0] == '1':
+#         print(f"Dividindo por {divisor} (XOR)")
+#         tmp = xor(divisor, tmp)
+#     else:
+#         print(f"Dividindo por {'0'*pick} (XOR com zeros)")
+#         tmp = xor('0'*pick, tmp)
+
+#     print(f"Resto final: {tmp}")
+#     return tmp
+
+# def calculate_crc(message, divisor):
+#     # Adiciona zeros ao final da mensagem para cálculo do CRC
+#     data = message + '0'*(len(divisor)-1)
+#     remainder = crc_division(data, divisor)
+#     return remainder
+
+# # Testar o programa
+# message = "110011001010101"  # Mensagem original
+# divisor = "10101"  # Polinômio divisor
+
+# crc = calculate_crc(message, divisor)
+# print(f"\nMensagem original: {message}")
+# print(f"Polinômio divisor: {divisor}")
+# print(f"CRC calculado: {crc}")
+# print(f"Mensagem com CRC: {message + crc}")
+
+# def carrega_cidades():
+#     resultado = []
+#     with open('cidades.csv', 'r', encoding='utf-8') as arquivo:
+#         for linha in arquivo:
+#             uf, ibge, nome, dia, mes, pop = linha.split(';')
+#             resultado.append(
+#                 (uf, int(ibge), nome, int(dia), int(mes), int(pop))
+#             )
+#     arquivo.close()
+#     return resultado
+
+# def cidades_pop_maior(populacao, resultado):
+#     nova_lista = []
+#     for cidade in resultado:
+#         if cidade[5] > populacao:
+#             nova_lista.append(cidade)
+#     return nova_lista
+
+# def cidades_maior_pop_mes(nova_lista, mes):
+#     lista_cidades = []
+#     for cidade in nova_lista:
+#         if cidade[4] == mes:
+#             lista_cidades.append(cidade)
+#     return lista_cidades    
+    
+    
+
+# def retornar_mes(mes):
+#     if mes == 1:
+#         return 'JANEIRO'
+#     elif mes == 2:
+#         return 'FEVEREIRO'
+#     elif mes == 3:
+#         return 'MARÇO'
+#     elif mes == 4:
+#         return 'ABRIL'
+#     elif mes == 5:
+#         return 'MAIO'
+#     elif mes == 6:
+#         return 'JUNHO'
+#     elif mes == 7:
+#         return 'JULHO'
+#     elif mes == 8:
+#         return 'AGOSTO'
+#     elif mes == 9:
+#         return 'SETEMBRO'
+#     elif mes == 10:
+#         return 'OUTUBRO'
+#     elif mes == 11:
+#         return 'NOVEMBRO'
+#     elif mes == 12:
+#         return 'DEZEMBRO'
+    
+# def main():
+#     mes = int(input())
+#     populacao = int(input())
+    
+#     resultado = carrega_cidades()
+#     nova_lista = cidades_pop_maior(populacao,resultado)
+#     lista_cidades = cidades_maior_pop_mes(nova_lista, mes)
+#     mes_ext = retornar_mes(mes)
+    
+#     print(f'CIDADES COM MAIS DE {populacao} HABITANTES E ANIVERSÁRIO EM {mes_ext}:')
+#     for cidade in lista_cidades:
+#         print(f'{cidade[2]}({cidade[0]}) tem {cidade[5]} habitantes e faz aniversário em {cidade[3]} de {mes_ext.lower()}.') 
+
+# if __name__ == '__main__':
+#     main()

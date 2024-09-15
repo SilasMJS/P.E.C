@@ -1,8 +1,6 @@
-import os 
-os.chdir('C:/Users/salat/OneDrive/Documentos/1-PROGRAMACAO.E.C/1-PYTHON')
 def carrega_cidades():
     resultado = []
-    with open('C:\Users\salat\OneDrive\Documentos\1-PROGRAMACAO.E.C\1-PYTHON\Sem-15-T1-SilasMalaquias\cidades.csv', 'r', encoding='utf-8') as arquivo:
+    with open('cidades.csv', 'r', encoding='utf-8') as arquivo:
         for linha in arquivo:
             uf, ibge, nome, dia, mes, pop = linha.split(';')
             resultado.append(
@@ -11,9 +9,27 @@ def carrega_cidades():
     arquivo.close()
     return resultado
 
+def nome_Mes(mes):
+    meses = ['JANEIRO','FEVEREIRO','MARÇO','ABRIL','MAIO','JUNHO','JULHO','AGOSTO','SETEMBRO','OUTUBRO','NOVEMBRO','DEZEMBRO']
+    for i in range(len(meses)):
+        if mes-1 == i:
+            return meses[i]
+
+def aniversario_Cidades(dia, mes, cidades):
+    lista = []
+    for cidade in cidades:
+        if cidade[3] == dia and cidade[4] == mes:
+            lista.append(cidade)
+    return lista
+
 def main():
+    dia = int(input())
+    mes = int(input())
+    n_mes = nome_Mes(mes)
     cidades = carrega_cidades()
-    print(cidades[:3] + cidades[-2:])
-    
+    cidades_Aniv = aniversario_Cidades(dia, mes, cidades)
+    print(f"CIDADES QUE FAZEM ANIVERSÁRIO EM {dia} DE {n_mes}:")
+    for cidade in cidades_Aniv:
+        print(f"{cidade[2]}({cidade[0]})")
 if __name__ == "__main__":
     main()

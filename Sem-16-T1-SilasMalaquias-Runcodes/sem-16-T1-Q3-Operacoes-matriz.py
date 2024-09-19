@@ -18,27 +18,29 @@ def menor(matriz):
 # função auxiliar maior elemento
 def maior(matriz):
     return max(max(l) for l in matriz)
-# função principal
+
 def main():
     matriz = []
-    # entrada de dados
-    n = int(input("Digite a Quantidade de Linhas: "))
-    m = int(input("Digite a Quantidade de Colunas: "))
+    n = int(input())
+    m = int(input())
     # criando matriz
     for i in range(n):
         l = []
         for j in range(m):
             l.append(int(input()))
         matriz.append(l)
-    # processamento de dados
+    
+    
     soma = somando(matriz)
     col_s =ult_col_soma(matriz)
     me_dia = media(matriz)
     min = menor(matriz)
     max = maior(matriz)
+    
     result = soma, col_s, me_dia, min, max
-    # saída de dados
+    
     print(result)
-# condição que verifica se a função/modulo é o principal se for vai chamar e executar
+    
+    
 if __name__ == "__main__":
     main()

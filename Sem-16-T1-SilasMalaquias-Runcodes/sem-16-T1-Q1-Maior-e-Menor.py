@@ -1,9 +1,8 @@
-# função auxiliar
 def menor_maior(matriz):
     n = len(matriz)
     maior = menor = matriz[0][0]
     pos_maior = pos_menor = (0,0)
-    # estrutura de repetição
+    
     for i in range(n):
         for j in range(n):
             if matriz[i][j] > maior:
@@ -12,22 +11,26 @@ def menor_maior(matriz):
             if matriz[i][j] < menor:
                 menor = matriz[i][j]
                 pos_menor = i,j
+                
     return pos_maior, pos_menor
-# função principal
+
 def main():
     matriz = []
-    # entrada de dados
-    n = int(input("Digite um Número para definir a Matriz: "))
-    # estrutura de repetição
+    
+    n = int(input())
     for i in range(n):
         l = []
         for col in range(n):
-            l.append(int(input("Digite um Elemento para Adicionar: ")))
+            l.append(int(input()))
         matriz.append(l)
-    # processamento de dados
+    
     p_maior, p_menor = menor_maior(matriz)
-    # saida de dados
-    print(f"O Maior: {p_maior}\nO Menor: {p_menor}")
-# condição que verifica se a função/modulo é o principal se for vai chamar e executar
+    
+    print(f"{p_maior}\n{p_menor}")
+    
+    # for _ in range(n):
+    #     print(f"{matriz[_]}")
+    
+    
 if __name__ == "__main__":
     main()
